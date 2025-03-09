@@ -1,0 +1,26 @@
+
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div  *ngIf="residence.id == id">
+        
+           <div class="profile-card-4 text-center">
+          <img [src]="residence.image" class="img img-responsive">
+          <div class="profile-content">
+            <div class="profile-name">{{ residence.name }}
+              <p>{{ residence.address }}</p>
+            </div>
+            <button type="button" class="btn btn-danger" >Like</button>
+           
+            <p class="card-text"><strong>Likes :</strong> {{ residence.like }}</p>
+            <div class="profile-description">
+              
+              <strong>Status:</strong> 
+              <span class="badge" [ngClass]="getStatusClass(residence.status)">{{ residence.status }}</span>
+             
+          </div>
+        </div>
+      </div>
+      </div> 
+    </div>
+
+  </div>

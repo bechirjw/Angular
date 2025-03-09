@@ -1,0 +1,15 @@
+{
+    "Residences":[
+    {"id":"1",
+    "name": "El fel",
+    "address":"Borj Cedria",
+    "image":"https://www.amc-archi.com/mediatheque/8/4/4/000343448_large/photo-23365-1393972-k4-k1-3222883-jpg.jpg", "status": "Disponible","like" :0},
+    {"id":2,"name": "El yasmine",
+    "address":"Ezzahra","image":"https://wallpaperaccess.com/full/4967739.jpg", "status":
+    "Disponible" ,"like":0},
+    {"id":3,"name": "El Arij",
+    "address":"Rades","image":"https://th.bing.com/th/id/OIP.0MVgnBrmSbtDx0NT8hZAugHaHk?rs=1&pid=ImgDetMain", "status":
+    "Vendu","like":0},
+    {"id":4,"name": "El Anber","address":"inconnu",
+    "image":"https://th.bing.com/th/id/OIP.WGksD0bDoLgeQf94WVgkRwHaE8?rs=1&pid=ImgDetMain"," status": "En Construction","like":0}
+    ]}

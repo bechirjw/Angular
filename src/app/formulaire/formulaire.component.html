@@ -1,0 +1,62 @@
+<!-- From Uiverse.io by mi-series --> 
+<div class="container">
+    <div class="form_area">
+        <p class="title">welcome</p>
+        <form [formGroup]="ResidenceForm" (ngSubmit)="onSubmit()">
+            <div class="form_group">
+                <label class="sub_title" for="id">id</label>
+                <input placeholder="id du résidence" formControlName="id" class="form_style" type="text">
+                <div *ngIf="ResidenceForm.controls['id'].invalid && ResidenceForm.controls['id'].touched" class="text-danger small mt-1">
+                    <p *ngIf="ResidenceForm.controls['id'].hasError('required')">Identity is obligatory</p>
+                    <p *ngIf="ResidenceForm.controls['id'].hasError('min')">Identity must be a positive number</p>
+                </div>
+            </div>
+            <div class="form_group">
+                <label class="sub_title" for="name">nom du résidence</label>
+                <input placeholder="quel est le nom" formControlName="name" class="form_style">
+                <div *ngIf="ResidenceForm.controls['name'].invalid && ResidenceForm.controls['name'].touched" class="text-danger small mt-1">
+                    <p *ngIf="ResidenceForm.controls['name'].hasError('required')">Name is obligatory</p>
+                    <p *ngIf="ResidenceForm.controls['name'].hasError('minlength')">Name must be at least 4 characters</p>
+                </div>
+            </div>
+            <div class="form_group">
+                <label class="sub_title" for="address">L'addresse</label>
+                <input placeholder="quelle est l'adresse" formControlName="address" class="form_style">
+                <div *ngIf="ResidenceForm.controls['address'].invalid && ResidenceForm.controls['address'].touched" class="text-danger small mt-1">
+                    <p *ngIf="ResidenceForm.controls['address'].hasError('required')">Address is obligatory</p>
+                    <p *ngIf="ResidenceForm.controls['address'].hasError('minlength')">Address must be at least 6 characters</p>
+                </div>
+            </div>
+            <div class="form_group">
+                <label class="sub_title" for="image">URL Image</label>
+                <input placeholder="ajouter l'image" formControlName="image" class="form_style">
+                <div *ngIf="ResidenceForm.controls['image'].invalid && ResidenceForm.controls['image'].touched" class="text-danger small mt-1">
+                    <p *ngIf="ResidenceForm.controls['image'].hasError('required')">Image URL is obligatory</p>
+                </div>
+            </div>
+            <!--
+            <div class="form_group">
+                <label class="sub_title" for="date">date de construction</label>
+                <input placeholder="aaaa/aa/aa" formControlName="date" class="form_style">
+                <div *ngIf="ResidenceForm.controls['date'].invalid && ResidenceForm.controls['date'].touched" class="text-danger small mt-1">
+                    <p *ngIf="ResidenceForm.controls['date'].hasError('required')">obligatory</p>
+                    <p *ngIf="ResidenceForm.controls['date'].hasError('pattern')">de la forme aaaa/aa/aa</p>
+                </div>
+            </div>
+            -->
+            <div class="form_group">
+                <label class="sub_title" for="status">Status</label>
+                <select class="form-select" formControlName="status">
+                    <option value="">Select status</option>
+                    <option *ngFor="let s of statusOptions" [value]="s">{{ s }}</option>
+                </select>
+                <div *ngIf="ResidenceForm.controls['status'].invalid && ResidenceForm.controls['status'].touched" class="text-danger small mt-1">
+                    <p *ngIf="ResidenceForm.controls['status'].hasError('required')">Status is obligatory</p>
+                </div>
+            </div>
+            <div>
+                <button class="btn" >Ajouter</button>
+            </div>
+        </form>
+    </div>
+</div>
